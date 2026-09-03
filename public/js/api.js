@@ -10,11 +10,11 @@ const API = {
     },
 
     async move(fromRow, fromCol, toRow, toCol) {
-        return API._post('/api/move.php', { fromRow, fromCol, toRow, toCol });
+        return API._post('api/move.php', { fromRow, fromCol, toRow, toCol });
     },
 
     async aiMove() {
-        return API._post('/api/ai-move.php', {});
+        return API._post('api/ai-move.php', {});
     },
 
     async _post(url, body) {
