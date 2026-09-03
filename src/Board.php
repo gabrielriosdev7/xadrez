@@ -121,6 +121,22 @@ class Board
     }
 
     /**
+     * Converte o tabuleiro inteiro numa matriz simples de
+     * arrays/null, pronta para json_encode() mandar pro front-end.
+     */
+    public function toArray(): array
+    {
+        $result = [];
+        for ($row = 0; $row < 8; $row++) {
+            for ($col = 0; $col < 8; $col++) {
+                $piece = $this->grid[$row][$col];
+                $result[$row][$col] = $piece?->toArray();
+            }
+        }
+        return $result;
+    }
+
+    /**
      * Representação simples em texto, útil para depurar no terminal
      * enquanto você desenvolve, antes mesmo de ter o front pronto.
      */
