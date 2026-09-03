@@ -15,11 +15,11 @@
 
 session_start();
 
-require_once __DIR__ . '/../src/Piece.php';
-require_once __DIR__ . '/../src/Board.php';
-require_once __DIR__ . '/../src/Rules.php';
-require_once __DIR__ . '/../src/Game.php';
-require_once __DIR__ . '/../src/AI.php';
+require_once __DIR__ . '/../../src/Piece.php';
+require_once __DIR__ . '/../../src/Board.php';
+require_once __DIR__ . '/../../src/Rules.php';
+require_once __DIR__ . '/../../src/Game.php';
+require_once __DIR__ . '/../../src/AI.php';
 
 header('Content-Type: application/json; charset=utf-8');
 
