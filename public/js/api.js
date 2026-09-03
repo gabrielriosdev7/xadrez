@@ -6,7 +6,7 @@
 
 const API = {
     async newGame(mode, difficulty) {
-        return API._post('/api/new-game.php', { mode, difficulty });
+        return API._post('api/new-game.php', { mode, difficulty });
     },
 
     async move(fromRow, fromCol, toRow, toCol) {
