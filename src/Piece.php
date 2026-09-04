@@ -54,6 +54,19 @@ abstract class Piece
     /**
      * Verifica se uma posição está dentro do tabuleiro 8x8.
      */
+    
+        /**
+     * Representação simples da peça, pronta para virar JSON e ser
+     * consumida pelo JavaScript no navegador.
+     */
+    public function toArray(): array
+    {
+        return [
+            'type' => $this->getSymbol(),
+            'color' => $this->color,
+        ];
+    }
+    
     protected function isOnBoard(int $row, int $col): bool
     {
         return $row >= 0 && $row < 8 && $col >= 0 && $col < 8;
